@@ -1,0 +1,74 @@
+/*[class*="col-"]{*/
+    /*padding-top: 15px;*/
+    /*padding-bottom: 15px;*/
+    /*background-color: #eee;*/
+    /*background-color: rgba(86,61,124,.15);*/
+    /*border: 1px solid #dddddd;*/
+    /*border:1px solid rgba(86,61,124,.2);*/
+/*}*/
+/*对引入的css文件进行修改一律放在index.css中*/
+.col-md-3 {
+    -ms-flex:0 0 25%;
+    flex:0 0 25%;
+    max-width:22%;
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    height: 200px;
+    background-color:white;
+}
+.col-md-3-buttom {
+    -ms-flex:0 0 25%;
+    flex:0 0 25%;
+    max-width:22%;
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    height: 200px;
+    margin-top: 10px;
+    background-color:white;
+}
+.col-md-define-1 {
+    -ms-flex:0 0 100%;
+    flex:0 0 100%;
+    min-width:100%;
+    position:relative;
+    /*width:100%;*/
+    padding-right:10px;
+    padding-left:10px;
+    margin-top: -15px;
+    height: 150px;
+    background-color:white;
+}
+.float-row {
+    display:-ms-flexbox;
+    display:flex;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    background-color:#393D49;
+    /*margin-right:-15px;*/
+    /*margin-left:-15px*/
+}
+.col-md-4 {
+    -ms-flex:0 0 33.333333%;
+    flex:0 0 33.333333%;
+    max-width:33.333333%;
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    height: 65px;
+
+}
+.col-md-8 {
+    -ms-flex:0 0 66.666667%;
+    flex:0 0 66.666667%;
+    max-width:66.666667%;
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    height:65px;
+}

@@ -1,0 +1,499 @@
+* {
+    margin: 0;
+    padding: 0;
+    /*list-style: none;*/
+    border:none;
+    box-sizing: border-box;
+}
+.three:hover{
+    -moz-box-shadow:0 0 10px #f2f2f2;
+    -webkit-box-shadow:0 0 10px #06c;
+    box-shadow:0 0 10px #a9a9a9;
+}
+.row {
+    content: "";
+    clear: both;
+    display: block;
+    width:100%;
+    height: 250px;
+    background-color: #fff;
+    margin-top: 10px;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-12 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+/* For device width 400px and smaller: */
+/*@media only screen and (max-device-width: 768px) {*/
+/*body{*/
+/*background-repeat: repeat;*/
+/*background-image: url('../../images/background.png');*/
+/*width: 100%;*/
+/*height: 400px;*/
+/*background-size: contain;*/
+/*}*/
+
+/*}*/
+/*!* For device width 768px and larger: *!*/
+/*@media only screen and (min-device-width: 768px) {*/
+/*body{*/
+/*background-repeat: repeat;*/
+/*background-image: url('../../images/background.png');*/
+/*width: 100%;*/
+/*height: 400px;*/
+/*background-size: contain;*/
+/*}*/
+/*}*/
+/*bg */
+.web_bg{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    min-width: 1000px;
+    z-index:-10;
+    zoom: 1;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    background-position: center 0;
+}
+/*bg */
+
+/*header*/
+.nav{
+    position:fixed;
+    left:0;
+    top:0;
+    width:100%;
+    z-index: 1;
+}
+.nav--title{
+    font-style: italic;
+    font-size: 32px;
+    color: #fff;
+}
+.layui-nv-img--change {
+    width:50px;
+    height:50px;
+    margin-right:10px;
+    border-radius:50%
+}
+/*header*/
+.placeHolder{
+    height: 75px;
+}
+/*banner*/
+.banner{
+    margin-top: -10px;
+    /*float: left;*/
+    /*height: 386px;*/
+    /*margin: 0 11px 0 0 ;*/
+    /*overflow: hidden;*/
+    /*position: relative;*/
+    /*width:1920px;*/
+    /*width: 100%;*/
+    /*height: 400px;*/
+    /*background-color: #9933cc;*/
+}
+/*banner*/
+
+/*!*courseshow*!*/
+/*.course{*/
+    /*width:75%;*/
+    /*height: 2092px;*/
+    /*margin: 0 auto;*/
+    /*!*background-color: white;*!*/
+/*}*/
+/*.courseshow{*/
+    /*height: 523px;*/
+    /*!*background-color: #f1f1f1;*!*/
+/*}*/
+/*.courseshow__extra1{*/
+    /*height: 56px;*/
+    /*!*background-color: #f1f1f1;*!*/
+/*}*/
+/*.courseshow__name{*/
+    /*font-size:26px;*/
+    /*height: 48px;*/
+    /*!*background-color:#f1f1f1 ;!*#33b5e5*!*!*/
+    /*display: flex;*/
+    /*display: -webkit-flex;  !*Safari*!*/
+/*}*/
+/*.courseshow-style{*/
+    /*width: 5px;*/
+    /*height: 24pt;*/
+    /*margin-top: 2px;*/
+/*}*/
+/*.courseshow__box-firitem{*/
+    /*flex-direction: row;*/
+/*}*/
+/*.courseshow__box-extraitem{*/
+    /*flex-grow: 2;*/
+/*}*/
+/*.courseshow__box-secitem{*/
+    /*flex-direction: row-reverse;*/
+/*}*/
+/*!*courseshow__video*!*/
+/*.courseshow__video{*/
+    /*height: 423px;*/
+    /*!*background-color:#f1f1f1;*!*/
+/*}*/
+/*.elastic__layout{*/
+    /*display: flex;*/
+    /*display: -webkit-flex;  !*Safari*!*/
+    /*flex-direction:row;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-around;*/
+/*}*/
+/*.courseshow__video ul li{*/
+
+    /*justify-content: space-around;*/
+/*}*/
+/*!*courseshow__video*!*/
+/*!*courseshow*!*/
+.menu ul {
+    margin-top: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #0099cc;
+}
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    margin-top: 5px;
+    text-align:left;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+.footer-style{
+    margin-top: 40px;
+    text-align: center;
+}
+
+
+/*课程分类页*/
+
+
+/*以下为设置li自动横向排列的样式*/
+/*#nav*/
+/*{*/
+/*margin: 0 auto;*/
+/*border: 2px solid #00CED1;*/
+/*}*/
+/*ul,li !*这是关键，去掉ul li默认的margin padding 值*!*/
+/*{*/
+/*margin: 0;*/
+/*padding: 0;*/
+/*list-style: none;*/
+/*}*/
+/*ul !*这是关键*!*/
+/*{*/
+/*display: flex;*/
+/*flex-direction: row;*/
+/*flex-wrap: wrap;*/
+
+/*}*/
+/*li*/
+/*{*/
+/*border: 1px solid;*/
+/*width: 100px; !*每个元素的初始化宽度*!*/
+/*text-align: center;*/
+/*margin-top: 10px;*/
+/*margin-bottom: 10px;*/
+/*flex:auto;  !*这是关键*!*/
+/*}*/
+
+/*!*以下为设置多栏div自动横向排列的样式*!*/
+/*.boxes !*这是关键*!*/
+/*{*/
+/*display: flex;*/
+/*flex-direction: row;*/
+/*flex-wrap: wrap;*/
+/*}*/
+/*.box*/
+/*{*/
+/*border: 1px solid #999;*/
+/*border-radius: 10px;*/
+/*flex: auto;!*这是关键*!*/
+/*margin: 5px;*/
+/*padding: 10px;*/
+/*width: 100px;!*每个元素的初始化宽度,这是关键*!*/
+/*}*/
+/*.box1*/
+/*{*/
+/*flex:2;!*设置匹配元素所占宽度为平均值的2倍，如果不设置，所有栏等宽*!*/
+/*}*/
+/*以上为设置li自动横向排列的样式*/
+
+
+.footer_2{
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/*course-overview*/
+.course-overview{
+    background-color: skyblue;
+    width: 100%;
+    margin: auto;
+    height: 310px;
+}
+.course-overview_firstul{
+    height: 140px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.course-overview_firstul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*border: 1px solid;*/
+    /*width: 100px; !*每个元素的初始化宽度*!*/
+    text-align: center;
+    margin-top: 10px;
+    /*margin-bottom: 10px;*/
+    flex:auto;  /*这是关键*/
+}
+.course-overview_secul{
+    height: 140px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.course-overview_secul li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    /*border: 1px solid;*/
+    /*width: 100px; !*每个元素的初始化宽度*!*/
+    text-align: center;
+    margin-top: 60px;
+    /*margin-bottom: 10px;*/
+    color:white;
+    flex:auto;  /*这是关键*/
+}
+/*.row_1 {*/
+/*display:-ms-flexbox;*/
+/*display:flex;*/
+/*-ms-flex-wrap:wrap;*/
+/*flex-wrap:wrap;*/
+/*margin-right:-15px;*/
+/*margin-left:-15px*/
+/*}*/
+.col-md-3_1 {
+    -ms-flex:0 0 25%;
+    flex:0 0 25%;
+    max-width:100%;
+    position:relative;
+    width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    height: 80px;
+    background-color:white;
+}
+/*course-overview*/
+.right__extra{
+    width:100%;
+    height: 47px;
+    background-color: #f1f1f1;
+}
+
+.right_1{
+
+}
+.row__extra{
+    width:100%;
+    height: 5px;
+    background-color: #f1f1f1;
+}
+/*课程分类页*/
+.m-nav {
+    width:100%;
+    background-color: white;
+    margin-top: 15px;
+    font-size: 14px;}
+.f-f0 {
+    font-family: "Microsoft YaHei", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+}
+.u-nav-v1 {
+    padding-bottom: 33px;
+    padding-left: 5px;
+    margin-left: 85px;
+}
+
+.u-nav-v1 li {
+    padding-top: 23px;
+    width: 125px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 120px;
+}
+
+.u-nav-v1 .u-nav-name {
+    display: inline-block;
+    padding: 0 20px;
+    width: 88px;
+    overflow: hidden;
+}
+
+.u-nav-v1 .u-nav-name.current {
+    background-color: #55b929;
+    color: #fff;
+    cursor: pointer;
+}
+
+.u-nav-v1 .u-nav-name.current:hover {
+    color: #fff;
+}
+
+.u-nav-v1 .u-nav-name:hover {
+    color: #55b929;
+    cursor: pointer;
+}
+
+.u-nav-v1 .u-nav-name span {
+    margin-right: 6px;
+    top: 1px;
+    position: relative;
+}
+.f-cb:after,.f-cbli li:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+.f-cb,.f-cbli li {
+    zoom: 1;
+}
+.f-cb:after,.g-container:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: '.';
+}
+
+.f-cb,.g-container {
+    zoom: 1;
+}
+.f-cb:after,.g-container:after {
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    content: ".";
+}
+
+.f-cb,.g-container {
+    zoom: 1;
+}
+.u-nav-v2 {
+    border-top: 1px dotted #ddd;
+    margin: 0 20px;
+    font-size: 14px;
+}
+
+.u-nav-v2 li {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+    margin-right: 40px;
+}
+
+.u-nav-v2 .u-name {
+    display: inline-block;
+}
+
+.u-nav-v2 .u-name:hover,.u-nav-v2 .u-name.current {
+    color: #55b929;
+    cursor: pointer;
+}
+/*分页*/
+.four{
+    box-shadow:0 0 10px #D6D6D6;
+    margin: 0 auto;
+}
+.pagination-wrapper {clear:both;padding:1em 0 2em 0;text-align:center;}
+.pagination {display: inline-block;
+    *display: inline;*zoom: 1;font-size:16px;border-radius: 3px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);}
+.pagination li{list-style: none;display: inline;float: left;line-height: 1em;text-decoration: none;border: 1px solid #ddd;border-left-width: 0;}
+.pagination li a {display: inline-block;padding: .5em .8em;background-color: white;
+    color: skyblue;}
+.pagination li a:hover {display: inline-block;padding: .5em .8em;background-color: #f1f1f1;color:dodgerblue; }
+.pagination li a:link{background:#fff;color: #4C78A5;} .pagination li a:hover{text-decoration:none;}
+.pagination li a:link:hover {color: #000;} .pagination li.thisclass {background-color: #f9f9f9;color:#999;}
+.pagination li:first-child {border-left-width: 1px;border-radius: 3px 0 0 3px;}
+.pagination li:last-child{border-radius: 0 3px 3px 0;}
+.pagination .pageinfo{color: dodgerblue;}

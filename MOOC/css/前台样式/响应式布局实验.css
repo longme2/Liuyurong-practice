@@ -1,0 +1,133 @@
+.container{
+    margin: 10px auto;
+    margin-top: -10px;
+}
+.footer_1{
+    height: 200px;
+    background-color: white;
+}
+@media screen and (min-width: 960px) {
+    .footer_1{
+        width: 100%;
+    }
+    .container{
+        width: 75%;
+        display: flex;
+    }
+    .main{
+        float: left;
+        height: 1000px;
+    }
+    .main{
+        margin-left: 5px;
+        margin-right: 5px;
+        flex-grow: 1;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 960px){
+
+    .container{
+        width: 600px;
+    }
+    .main{
+        float: left;
+        height: 400px;
+    }
+
+    .main{
+        width: 435px;
+        margin-left: 5px;
+    }
+    .container{
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    .container{
+        width: 400px;
+    }
+
+    .main{
+        margin-top: 10px;
+        width: 400px;
+        height: 200px;
+    }
+
+    .container{
+        height: 420px;
+    }
+}
+/*courseshow*/
+.course{
+    width:72%;
+    height: 1000px;
+    margin: 0 auto;
+    /*background-color: white;*/
+}
+.courseshow{
+    margin-top: -790px;
+    height: 523px;
+    /*background-color: #f1f1f1;*/
+}
+.courseshow__extra1{
+    height: 56px;
+    /*background-color: #f1f1f1;*/
+}
+.courseshow__name{
+    font-size:26px;
+    height: 48px;
+    /*background-color:#f1f1f1 ;!*#33b5e5*!*/
+    display: flex;
+    display: -webkit-flex;  /*Safari*/
+}
+.courseshow-style{
+    width: 5px;
+    height: 24pt;
+    margin-top: 2px;
+}
+.courseshow__box-firitem{
+    flex-direction: row;
+}
+.courseshow__box-extraitem{
+    flex-grow: 2;
+}
+.courseshow__box-secitem{
+    flex-direction: row-reverse;
+}
+/*courseshow__video*/
+.courseshow__video{
+    height: 423px;
+    /*background-color:#f1f1f1;*/
+}
+.elastic__layout{
+    display: flex;
+    display: -webkit-flex;  /*Safari*/
+    flex-direction:row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.courseshow__video ul li{
+
+    justify-content: space-around;
+}
+.h2-style{
+    font-size: 18px;
+    color: #000;
+    text-decoration:-moz-none;
+    text-decoration: none;
+}
+.h3-style{
+    font-size: 14px;
+    color: #000;
+    text-decoration:-moz-none;
+    text-decoration: none;
+}
+.h2-style1{
+    font-size: 18px;
+    color:white;
+
+}
+/*courseshow__video*/
+/*courseshow*/
