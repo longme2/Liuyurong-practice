@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员</title>
+    <link rel="icon" href="../../新建文件夹%20(2)/images/favicon.ico" type="image/x-ico">
+    <link href="../../新建文件夹%20(2)/css/index.css" rel="stylesheet">
+
+</head>
+<body>
+<div class="wholePage">
+    <!--头部-->
+    <div class="header" id="header">
+        <!--头部左侧-->
+        <div class="header-left" id="header_left">
+            <div><img src="../../新建文件夹%20(2)/images/酒店徽章.PNG " width="262" height="100" alt=""></div>
+        </div>
+        <!--头部左侧-->
+        <!--头部右侧-->
+        <div class="header-right">
+            <div>
+                <ul class="header-right-setup">
+                    <li><a href="">设置</a></li>
+                </ul>
+                <ul class="header-right-help">
+                    <li><a href="">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--头部右侧-->
+    <!--中部左侧-->
+    <div class="middle-left">
+        <div id="navcontainer">
+            <ul id="navlist">
+                <!--<div id="subnavlist">-->
+                <li id="active_customer"><a href="#" id="current_customer">客户信息</a>
+                    <ul id="subnavlist_customer">
+                        <li id="subactive_customer"><a href="凯莱国际酒店.html" id="subcurrent_customer">首页</a></li>
+                        <li><a href="客房预订.html">后台客房预订</a></li>
+                        <li><a href="客户管理.html">客户管理</a></li>
+                        <li><a href="客户管理.html">客户信息修改</a></li>
+                    </ul>
+
+                </li>
+                <li id="active_income"><a href="#" id="current_income">数据中心</a>
+                    <ul id="subnavlist_income">
+                        <!--<li id="subactive_income"><a href="#.html" id="subcurrent_income"></a></li>-->
+                        <li><a href="客房数据.html">客房信息</a></li>
+                        <li><a href="客户管理.html">用户信息</a></li>
+                        <li><a href="表单管理.html">订单信息</a></li>
+                    </ul>
+                </li>
+                <!--</div>-->
+                <li><a href="#">管理员</a>
+                    <ul>
+                        <li><a href="管理员.html">增加管理员账号</a></li>
+                        <li><a href="管理员.html">管理员列表</a></li>
+                    </ul>
+                </li>
+                <li id="active_table"><a href="表单管理.html">表单管理</a>
+                    <ul>
+                        <li><a href="客户管理.html">客户表</a></li>
+                        <li><a href="表单管理.html">订单表</a></li>
+                        <li><a href="管理员.html">管理员表</a></li>
+                        <li><a href="客房数据.html">套房表</a></li>
+                    </ul>
+                </li>
+                <li id="active_process"><a href="#">流程管理</a>
+                    <ul>
+                        <li><a href="流程管理.html">综合流程图</a></li>
+                        <li><a href="流程管理.html">逻辑关系</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--中部左侧-->
+    <!--tab-->
+    <div class="tab">
+        <ul class="skillImg">
+            <li onclick="clickC(1)" id="click1" class="clickA"><p style="text-align: center"><a href="后台.html">平台管理</a></p></li>
+            <li onclick="clickC(2)" id="click2" class="clickA"><p style="text-align: center"><a href="客房数据.html">客房管理</a></p></li>
+            <li onclick="clickC(3)" id="click3" class="clickA"><p style="text-align: center"><a href="后台页面.html">安全管理</a></p></li>
+            <li onclick="clickC(4)" id="click4" class="clickA"><p style="text-align: center"><a href="后台页面.html">数据中心</a></p></li>
+            <li onclick="clickC(5)" id="click5" class="clickA"><p style="text-align: center"><a href="表单管理.html">表单管理</a></p></li>
+            <li onclick="clickC(6)" id="click6" class="clickA"><p style="text-align: center"><a href="流程管理.html">流程管理</a></p></li>
+            <li onclick="clickC(7)" id="click7" class="clickA"><p style="text-align: center"><a href="后台页面.html">交流中心</a></p></li>
+            <li onclick="clickC(8)" id="click8" class="clickA"><p style="text-align: center"><a href="后台页面.html">企业邮箱</a></p></li>
+            <li onclick="clickC(9)" id="click9" class="clickA"><p style="text-align: center"><a href="管理员.html">管理员账户</a></p></li>
+        </ul>
+    </div>
+    <!--tab-->
+    <!--table-->
+    <table class="administrator">
+        <form action="" method="post">
+            <tbody>
+                <td>
+                    <a>账号:</a><input name="account"/>
+                </td>
+            </tbody>
+            <tbody>
+                <td><a>密码：</a><input name="password"/></td>
+            </tbody>
+            <tbody>
+            <td><input type="submit" value="提交"></td>
+            </tbody>
+        </form>
+    </table>
+    <!--table-->
+    <!--内容部分-->
+    <div class="banner">
+        <img src="../images/banner.png" alt="">
+    </div>
+    <div class="rightside">
+        <img src="../../新建文件夹%20(2)/images/侧边pic1.PNG" alt="">
+    </div>
+    <div class="offside">
+        <img src="../../新建文件夹%20(2)/images/侧边pic2.PNG" alt="">
+    </div>
+    <!--内容部分-->
+</div>
+</body>
+<script>
+    var min=1,max=9;
+    window.onload=clickC;
+    function clickC(obj){
+        if(Number(obj)){
+            min=obj;
+        }
+        for(var i=1;i<(max+1);i++){
+            if(i==min){
+                document.getElementById("click"+i).className="clickA";
+            }else{
+                document.getElementById("click"+i).className="clickB";
+            }
+        }
+    }
+
+</script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/bootstrap-paginator.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+
+</html>

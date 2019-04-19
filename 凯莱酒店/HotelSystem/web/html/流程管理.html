@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流程管理</title>
+    <link rel="icon" href="../images/favicon.ico" type="image/x-ico">
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../css/style2.css" rel="stylesheet">
+</head>
+<body>
+<div class="wholePage">
+    <!--header-->
+    <!--header-->
+</div>
+</body>
+<script>
+    var min=1,max=9;
+    window.onload=clickC;
+    function clickC(obj){
+        if(Number(obj)){
+            min=obj;
+        }
+        for(var i=1;i<(max+1);i++){
+            if(i==min){
+                document.getElementById("click"+i).className="clickA";
+            }else{
+                document.getElementById("click"+i).className="clickB";
+            }
+        }
+    }
+
+</script>
+</html>
