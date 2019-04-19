@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hibernate.order.OrderTableEntity" table="order_table" schema="hotel_system">
+        <id name="orderId">
+            <column name="order_id" sql-type="bigint(255)"/>
+        </id>
+        <property name="orderRoomId">
+            <column name="order_room_id" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="orderClientName">
+            <column name="order_client_name" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="orderClientSex">
+            <column name="order_client_sex" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="orderClientId">
+            <column name="order_client_id" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="orderDate">
+            <column name="order_date" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="oderLeaveDate">
+            <column name="oder_leave_date" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="orderHotelType">
+            <column name="order_hotel_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="orderCashpledge">
+            <column name="order_cashpledge" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="orderHotelPrice">
+            <column name="order_hotel_price" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="orderHotelPayment">
+            <column name="order_hotel_payment" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
