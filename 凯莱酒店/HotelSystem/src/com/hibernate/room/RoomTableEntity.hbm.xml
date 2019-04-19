@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.hibernate.room.RoomTableEntity" table="room_table" schema="hotel_system">
+        <id name="roomId">
+            <column name="room_id" sql-type="int(11)"/>
+        </id>
+        <property name="roomType">
+            <column name="room_type" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="roomStatus">
+            <column name="room_status" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="roomPrice">
+            <column name="room_price" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="roomCashpledge">
+            <column name="room_cashpledge" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+        <property name="roomPayment">
+            <column name="room_payment" sql-type="double" precision="-1" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

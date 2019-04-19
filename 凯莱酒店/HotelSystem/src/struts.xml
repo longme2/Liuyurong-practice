@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <package name="struts2" extends="struts-default" namespace="/">
+        <action name="order_*" class="com.web.action.OrderAction" method="{1}">
+            <result name="success">jsp/下单成功.jsp</result>
+            <result name="fail">jsp/下单失败.jsp</result>
+            <result name="findsuccess">jsp/订单数据.jsp</result>
+            <result name="finddelsuccess">jsp/订单管理.jsp</result>
+            <result name="delsuccess">jsp/凯莱国际酒店管理系统.jsp</result>
+        </action>
+        <action name="LoginAction" class="com.web.action.LoginAction">
+            <result name="success">jsp/凯莱国际酒店管理系统.jsp</result>
+            <result name="fail">jsp/重新登录.jsp</result>
+        </action>
+        <action name="room_*" class="com.web.action.RoomAction" method="{1}">
+            <result name="success">/jsp/客房数据.jsp</result>
+            <result name="finddelsuccess">jsp/客房管理.jsp</result>
+            <result name="updatesuccess">jsp/凯莱国际酒店管理系统.jsp</result>
+        </action>
+        <action name="admin_*" class="com.web.action.AdminAction" method="{1}">
+            <result name="success">jsp/管理员列表.jsp</result>
+            <result name="findelsuccess">jsp/权限管理.jsp</result>
+        </action>
+    </package>
+    <!-- 开启静态方法 允许访问-->
+    <constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+
+</struts>
