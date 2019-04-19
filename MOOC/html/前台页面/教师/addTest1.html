@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body>
+<div id="father">
+    <form action="<%=request.getContextPath()%>/testServlet" method="post" name="conform" class="conform" id="table" >
+                <fieldset>
+                    <legend>第一节</legend>
+                    小节名：<input type="text" id="ipt1"><br>
+                    视&nbsp&nbsp&nbsp频：<input type="text" id="ipt2"><br>
+                    <input type='button' class='btnDel' value='删除' onclick = "delFirst(this);"/>
+                </fieldset>
+
+    </form>
+    <input type="button" value="添加" id="add" />
+</div>
+<!--<table id="table">-->
+
+<!--</table>-->
+
+
+
+<script>
+    var oUser = document.getElementById('ipt1');
+    var oSex = document.getElementById('ipt2');
+    var btn = document.getElementById('add');
+
+    btn.onclick = function(){
+
+        var oTable = document.getElementById('table');
+        var oTr = document.createElement('tr');
+        var oTd1 = document.createElement('td');
+        var oTd2 = document.createElement('td');
+        var oTd3 = document.createElement('td');
+        var btn1 = document.createElement('button');
+        oUser.innerHTML=oUser.value;
+        oSex.innerHTML=oSex.value;
+        btn1.innerHTML = '删除';
+        btn1.setAttribute('onclick','del(this)');
+
+        oTd1.setAttribute('aaa','val');
+        oTr.appendChild(oTd1);
+        oTr.appendChild(oTd2);
+        oTd3.appendChild(btn1);
+        oTr.appendChild(oTd3);
+        oTable.appendChild(oTr);
+
+    }
+    //删除某一行
+    function del(obj){
+        var oParent = obj.parentNode.parentNode;
+        document.getElementById('table').removeChild(oParent);
+    }
+    //删除第一行
+    function delFirst(obj) {
+        var oParent = obj.parentNode.parentNode;
+        document.getElementById('father').removeChild(oParent);
+    }
+</script>
+</body>
+</html>

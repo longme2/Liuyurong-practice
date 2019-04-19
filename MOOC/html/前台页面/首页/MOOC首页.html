@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>MOOC教学平台</title>
+    <link rel="stylesheet" href="../../../css/前台样式/style.css">
+    <link rel="stylesheet" href="../../../css/layui-css/layui.css">
+    <link rel="stylesheet" href="../../../css/前台样式/index.css">
+    <style>
+        /*换肤样式的实验*/
+        .skin{
+            float: right;
+            margin: 10px;
+            padding: 4px;
+            width: 120px;
+        }
+        .skin li{
+            margin-right: 4px;
+            width: 15px;
+            height: 15px;
+            overflow: hidden;
+            display: block;
+            cursor: pointer;
+            float: left;
+            text-indent: -9999px;
+            background-image: url("../../../images/97ac26c674be71a7846f872c17b90f85.jpg");
+        }
+
+            .skin_0{background-position: 0 0;}
+            .skin_1{background-position: 15px 0;}
+            .skin_2{background-position: 35px 0;}
+            .skin_3{background-position: 55px 0;}
+            .skin_4{background-position: 75px 0;}
+            .skin_5{background-position: 95px 0;}
+            .skin_0.selected{background-position: 0 15px;}
+            .skin_1.selected{background-position: 15px 15px;}
+            .skin_2.selected{background-position: 35px 15px;}
+            .skin_3.selected{background-position: 55px 15px;}
+            .skin_4.selected{background-position: 75px 15px;}
+            .skin_5.selected{background-position: 95px 15px;}
+        /*换肤样式的实验*/
+    </style>
+</head>
+<body>
+<div class="whole--page">
+
+    <!--背景图片-->
+    <div class="web_bg" style="background-image: url(../../../images/97ac26c674be71a7846f872c17b90f85.jpg);"></div>
+    <!--背景图片-->
+
+    <!--换肤html的实验-->
+    <!--<div class="web-bg">-->
+        <!--<ul class="skin">-->
+            <!--<li class="skin_0 selected"><img src="" alt=""></li>-->
+            <!--<li class="skin_1"><img src="" alt=""></li>-->
+            <!--<li class="skin_2"><img src="" alt=""></li>-->
+            <!--<li class="skin_3"><img src="" alt=""></li>-->
+            <!--<li class="skin_4"><img src="" alt=""></li>-->
+            <!--<li class="skin_5"><img src="" alt=""></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--换肤hrml的实验-->
+
+<!--顶部吸顶-->
+    <div class="container-fluid">  <!--BS的样式，实现居中-->
+    <div class="float-row nav">
+        <div class="nav--title col-md-4">MOOC慕课平台</div>
+        <div class="layui-nav .col-md-8">
+            <ul>
+            <li class="layui-nav-item"><a href="">首页</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">全部课程</a>
+                <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                    <dd><a href="">计算机</a></dd>
+                    <dd><a href="">数学</a></dd>
+                    <dd><a href="">心理学</a></dd>
+                    <dd><a href="">法学</a></dd>
+                    <dd><a href="">经济学</a></dd>
+                    <dd><a href="">哲学</a></dd>
+                    <dd><a href="">工学</a></dd>
+                    <dd><a href="">历史</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href="">我的课程</a></li>
+            <li class="layui-nav-item"><a href="">会员中心</a></li>
+            <li class="layui-nav-item">
+            <a href="">个人中心<span class="layui-badge-dot"></span></a>
+            </li>
+            <li class="layui-nav-item">
+            <a href=""><img src="../../../images/headpic.png" class="layui-nav-img">我</a>
+            <dl class="layui-nav-child">
+            <dd><a href="javascript:;">修改信息</a></dd>
+            <dd><a href="javascript:;">退出登录</a></dd>
+            </dl>
+            </li>
+            <li class="layui-nav-item">
+            <!--后续通过js绑定layui-bage来实现改变span的内容-->
+            <a href="">消息中心<span class="layui-badge">4</span></a>
+            </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+    <div class="placeHolder">
+    <!--简易的实现一个吸顶效果，撑开页面-->
+    </div>
+<!--顶部吸顶-->
+
+<!--banner-->
+<div class="banner">
+    <div class="layui-carousel" id="test1">
+        <div carousel-item>
+            <div><img src="../../../images/5aae366e01aa1.png" alt=""></div>
+            <div><img src="../../../images/5ca8303051d34.png" alt=""></div>
+            <div><img src="../../../images/5aae366e01afb.png" alt=""></div>
+            <div><img src="../../../images/摄图网_400077481_banner.jpg" alt=""></div>
+            <div><img src="../../../images/摄图网_500558136_banner.jpg" alt=""></div>
+        </div>
+    </div>
+</div>
+<!--<div class="banner">-->
+    <!--<a href="" id="JS_imgWrap">-->
+        <!--<img src="../../images/ad1.jpg" width="1366" height="386" alt="蓝黄温暖上线">-->
+        <!--<img src="../../images/ad2.jpg" width="1366" height="386" alt="橘子热情洋溢">-->
+        <!--<img src="../../images/ad3.jpg" width="1366" height="386" alt="嘿嘿嘿嘿嘿嘿">-->
+        <!--<img src="../../images/ad4.jpg" width="1366" height="386" alt="啦啦啦啦啦啦">-->
+    <!--</a>-->
+    <!--<div>-->
+        <!--<a href=""><em>蓝黄温暖上线</em><em>课程免费大放送</em></a>-->
+        <!--<a href=""><em>橘子热情洋溢</em><em>课程免费大放送</em></a>-->
+        <!--<a href=""><em>嘿嘿嘿嘿嘿嘿</em><em>课程免费大放送</em></a>-->
+        <!--<a href=""><em>啦啦啦啦啦啦</em><em>课程免费大放送</em></a>-->
+    <!--</div>-->
+<!--</div>-->
+<!--banner-->
+<!--content-->
+
+<!--course-overview-->
+<div class="course-overview">
+<!--二级页面中设置，面包屑效果-->
+<!--<span class="layui-breadcrumb">-->
+  <!--<a href="">首页</a>-->
+  <!--<a href="">国际新闻</a>-->
+  <!--<a href="">亚太地区</a>-->
+  <!--<a><cite>正文</cite></a>-->
+<!--</span>-->
+</div>
+<!--course-overview-->
+
+<!--status-->
+<div class="status">
+<!--按热度等方式排序-->
+</div>
+<!--status-->
+
+<!--video-playing-->
+<div class="course">
+<!--computer-course-->
+<div class="courseshow">
+    <p class="courseshow__extra1">&nbsp</p>  <!--与banner撑开距离-->
+    <div class="courseshow__name">
+        <img class="courseshow-style" src="../../../images/样式1.png" alt="">
+        <span class="courseshow__box-firitem">&nbsp&nbsp计算机</span>
+        <span class="courseshow__box-extraitem"></span>
+        <span class="courseshow__box-secitem layui-btn layui-btn-primary">更多</span>
+    </div>
+    <div class="courseshow__video">
+        <ul class="elastic__layout">
+            <div class="col-md-3 three">
+                <a href="">
+                <ul>
+                    <li><img class="col-md-define-1" src="../../../images/5aae366e01afb.png" alt=""></li>
+                    <h2>java高级程序设计</h2>
+                    <h3>尹萍</h3>
+                </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../../images/5aae366e01aa1.png" alt=""></li>
+                        <h2>php新手入门</h2>
+                        <h3>王现伟</h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../../images/5ca8303051d34.png" alt=""></li>
+                        <h2>C++从入门到精通</h2>
+                        <h3>张淑敏</h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+        </ul>
+    </div>
+    <!--</div>-->
+</div>
+<!--computer-course-->
+<!--math-course-->
+<div class="courseshow">
+    <p class="courseshow__extra1">&nbsp</p>
+    <div class="courseshow__name">
+        <img class="courseshow-style" src="../../../images/样式1.png" alt="">
+        <span class="courseshow__box-firitem">&nbsp&nbsp数学</span>
+        <span class="courseshow__box-extraitem"></span>
+        <span class="courseshow__box-secitem layui-btn layui-btn-primary">更多</span>
+    </div>
+    <div class="courseshow__video">
+        <ul class="elastic__layout">
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../../images/5aae366e01afb.png" alt=""></li>
+                        <h2>java高级程序设计</h2>
+                        <h3>尹萍</h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../../images/5aae366e01aa1.png" alt=""></li>
+                        <h2>php新手入门</h2>
+                        <h3>王现伟</h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../../images/5ca8303051d34.png" alt=""></li>
+                        <h2>C++从入门到精通</h2>
+                        <h3>张淑敏</h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+        </ul>
+    </div>
+</div>
+<!--math-course-->
+<!--economics-course-->
+    <div class="courseshow">
+        <p class="courseshow__extra1">&nbsp</p>
+        <div class="courseshow__name">
+            <img class="courseshow-style" src="../../../images/样式1.png" alt="">
+            <span class="courseshow__box-firitem">&nbsp&nbsp经济学</span>
+            <span class="courseshow__box-extraitem"></span>
+            <span class="courseshow__box-secitem layui-btn layui-btn-primary">更多</span>
+        </div>
+        <div class="courseshow__video">
+            <ul class="elastic__layout">
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="../../../images/5aae366e01afb.png" alt=""></li>
+                            <h2>java高级程序设计</h2>
+                            <h3>尹萍</h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="../../../images/5aae366e01aa1.png" alt=""></li>
+                            <h2>php新手入门</h2>
+                            <h3>王现伟</h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="../../../images/5ca8303051d34.png" alt=""></li>
+                            <h2>C++从入门到精通</h2>
+                            <h3>张淑敏</h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </div>
+<!--economics-course-->
+<!--law-course-->
+    <div class="courseshow">
+        <p class="courseshow__extra1">&nbsp</p>
+        <div class="courseshow__name">
+            <img class="courseshow-style" src="../../../images/样式1.png" alt="">
+            <span class="courseshow__box-firitem">&nbsp&nbsp法学</span>
+            <span class="courseshow__box-extraitem"></span>
+            <span class="courseshow__box-secitem layui-btn layui-btn-primary">更多</span>
+        </div>
+        <div class="courseshow__video">
+            <ul class="elastic__layout">
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="../../../images/5aae366e01afb.png" alt=""></li>
+                            <h2>java高级程序设计</h2>
+                            <h3>尹萍</h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="../../../images/5aae366e01aa1.png" alt=""></li>
+                            <h2>php新手入门</h2>
+                            <h3>王现伟</h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="../../../images/5ca8303051d34.png" alt=""></li>
+                            <h2>C++从入门到精通</h2>
+                            <h3>张淑敏</h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3 three">
+                    <a href="">
+                        <ul>
+                            <li><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+                <div class="col-md-3-buttom three">
+                    <a href="">
+                        <ul>
+                            <li ><img class="col-md-define-1" src="" alt=""></li>
+                            <h2></h2>
+                            <h3></h3>
+                        </ul>
+                    </a>
+                </div>
+            </ul>
+        </div>
+    </div>
+<!--law-course-->
+</div>
+<!--video-playing-->
+<!--content-->
+    <div class="row">
+
+    <div class="col-3 menu">
+        <ul>
+            <li>加入我们</li>
+            <li>常见问题</li>
+            <li>意见反馈</li>
+            <li>法律条款</li>
+        </ul>
+    </div>
+
+    <div class="col-6 footer-style">
+        <h1>MOOC</h1>
+        <p>由高教社联手网易推出，让每一个有提升愿望的用户能够学到中国知名高校的课程，并获得认证。</p>
+    </div>
+    <div class="col-3 ">
+        <div class="aside">
+            <h2>我们是？</h2>
+            <p>由高教社联手网易推出中国知名高校网络课程平台</p>
+            <h2>我们在？</h2>
+            <p>海南省三亚市吉阳区学院路171号三亚学院</p>
+            <h2>BE BETTER</h2>
+            <p>我们将一起变得更优秀, 快加入我们吧</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+</div>
+<script src="../../../js/jQueryfunc.js"></script>
+<script src="../../../js/lay/layui.all.js"></script>
+<script>
+    layui.use('carousel', function(){
+        var carousel = layui.carousel;
+        //建造实例
+        carousel.render({
+            elem: '#test1'
+            ,width: '100%' //设置容器宽度
+            ,arrow: 'always' //始终显示箭头
+            //,anim: 'updown' //切换动画方式
+        });
+    });
+    var carousel = layui.carousel;
+
+    //监听轮播切换事件
+    carousel.on('change(test1)', function(obj){ //test1来源于对应HTML容器的 lay-filter="test1" 属性值
+        console.log(obj.index); //当前条目的索引
+        console.log(obj.prevIndex); //上一个条目的索引
+        console.log(obj.item); //当前条目的元素对象
+    });
+    var ins = carousel.render(options);
+
+    //重置轮播
+    ins.reload(options);
+</script>
+<script>
+    // 网页换肤效果:changeSkin.js
+    $(function () {
+        var $li=$("#skin li");
+        $li.click(function () {
+            switchSkin(this.id);
+        });
+        var cookie_skin=$.cookie("MyCssSkin");
+        if(cookie_skin){
+            switchSkin(cookie_skin);
+        }
+    });
+    function switchSkin(skinName) {
+        $("#"+skinName).addClass("selected").siblings().removeClass("selected");
+        $("#cssfile").attr("herf","styles/skin/"+skinName+".css");
+        //设置不同皮肤
+        $.cookie("MyCssSkin",skinName,{path:'/',expires:10});
+    }
+    // 网页换肤效果
+</script>
+</body>
+</html>

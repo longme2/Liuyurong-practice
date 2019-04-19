@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body>
+
+<input type='button' class='btnAdd' value='添加' onclick="addDiv()"/>
+<div id="father">
+    <form action="<%=request.getContextPath()%>/testServlet" method="post" name="conform" class="conform">
+        <fieldset>
+            <legend>配置</legend>
+            <input type="text" value="" name="testName" class="testName"/>
+            <input type='button' class='btnDel' value='删除' onclick = "del(this);"/>
+        </fieldset>
+    </form>
+</div>
+<input type="button" class="btnSub" value="提交"/>
+
+<!--<button onclick="addDiv()">add div</button>-->
+<!--<button onclick="$(this).parent().removeDiv();">remove div</button>-->
+    <script type="text/javascript">
+        var addDiv=function(){
+            var div=document.createElement('div');
+            div.innerHTML='<form action="<%=request.getContextPath()%>/testServlet" method="post" name="conform" class="conform">\n' +
+                '        <fieldset>\n' +
+                '            <legend>配置</legend>\n' +
+                '            <input type="text" value="" name="testName" class="testName"/>\n' +
+                '            <input type=\'button\' class=\'btnDel\' value=\'删除\' onclick = "del(this);"/>\n' +
+                '        </fieldset>\n' +
+                '    </form>';
+            document.body.appendChild(div);
+        };
+        // var removeDiv=function(){
+        // var div=document.body.getElementsByTagName('div')[0];
+        // if(div){
+        //     div.parentNode.removeChild(div);
+        // }
+        // };
+        //删除某一行
+        function del(obj){
+            var oParent = obj.parentNode.parentNode;
+            // console.log(oParent)
+            document.getElementById('form').removeChild(oParent);
+        }
+    </script>
+<script>
+    var btn = document.getElementById('tj');
+</script>
+</body>
+</html>
+

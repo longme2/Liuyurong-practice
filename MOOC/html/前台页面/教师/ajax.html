@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>答题</title>
+    <!--<script src="${ctx}/static/plugins/jquery/jquery.js"></script>-->
+</head>
+<body>
+<!--<script src="${ctx}/static/plugins/layui/layui.js"></script>-->
+
+<p>点击按钮就可以执行 <em>displayDate()</em> 函数。</p>
+
+<input type="text" value="2" name="id" readonly="readonly">
+<button onclick="displayDate()">点击这里</button>
+
+<script>
+    layui.use(['element','jquery','layer'],function () {
+        var element = layui.element;
+        var jquery = layui.jquery;
+        var layer = layui.layer;
+    });
+
+    function displayDate()
+    {
+        //获取名字
+        var paperId = $('input[name=id]').val();
+
+        alert(paperId);
+
+        $.ajax({
+            url:'${ctx}/coursePaperController/pullTest?paperId='+ paperId,
+            type:'get',
+            success:function (data) {
+                document.getElementById("demo").innerHTML=data.code;
+            }
+        })
+    }
+</script>
+
+<p id="demo"></p>
+
+<a href="${ctx}/coursePaperController/pullTest/2">下拉试卷</a>
+
+</body>
+</html>

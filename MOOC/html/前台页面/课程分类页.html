@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MOOC教学平台</title>
+    <link rel="stylesheet" href="../../css/前台样式/style.css">
+    <link rel="stylesheet" href="../../css/layui-css/layui.css">
+    <link rel="stylesheet" href="../../css/前台样式/index.css">
+    <link rel="stylesheet" href="../../css/前台样式/响应式布局实验.css">
+    <link rel="stylesheet" href="../../css/前台样式/bootstrap.min.css">
+    <style>
+        body{
+            background-color: #f1f1f1;
+        }
+      .font-size{
+          font-size: 14px;
+          margin-top: 10px;
+      }
+        .checked {
+            background-position: 0  -20px;
+        }
+    </style>
+</head>
+<body>
+<!--顶部吸顶-->
+<div class="heading container-fluid">  <!--BS的样式，实现居中-->
+    <div class="float-row nav">
+        <div class="nav--title col-md-4">MOOC慕课平台</div>
+        <div class="layui-nav .col-md-8">
+            <ul>
+                <li class="layui-nav-item"><a href="">首页</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">全部课程</a>
+                    <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                        <dd><a href="">计算机</a></dd>
+                        <dd><a href="">数学</a></dd>
+                        <dd><a href="">心理学</a></dd>
+                        <dd><a href="">法学</a></dd>
+                        <dd><a href="">经济学</a></dd>
+                        <dd><a href="">哲学</a></dd>
+                        <dd><a href="">工学</a></dd>
+                        <dd><a href="">历史</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="">我的课程</a></li>
+                <li class="layui-nav-item"><a href="">会员中心</a></li>
+                <li class="layui-nav-item">
+                    <a href="">个人中心<span class="layui-badge-dot"></span></a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href=""><img src="../../images/headpic.png" class="layui-nav-img">我</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">修改信息</a></dd>
+                        <dd><a href="javascript:;">退出登录</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <!--后续通过js绑定layui-bage来实现改变span的内容-->
+                    <a href="">消息中心<span class="layui-badge">4</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="placeHolder">
+    <!--简易的实现一个吸顶效果，撑开页面-->
+</div>
+<!--背景图片-->
+<div class="web_bg" style="background-image: url(../../images/97ac26c674be71a7846f872c17b90f85.jpg);"></div>
+<!--背景图片-->
+<div class="container">
+    <div class="main">
+        <!--二级页面中设置，面包屑效果-->
+        <div>
+        <ol class="breadcrumb col-m-12">
+            <li><a href="../前台页面/首页/MOOC首页.html">首页</a></li>
+            /
+            <li class="active">当前页</li>
+        </ol>
+        </div>
+        <div class="right_1">
+        <p class="row__extra"></p>
+        </div>
+        <!--二级页面中设置，面包屑效果-->
+        <div id="j-nav" class="m-nav f-f0"><ul class="u-nav-v1 f-cb">
+            <li class="j-nav-style"><a href=""><span class="u-nav-name ga-click current"><span class="u-icon-all"></span>全部</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-computer"></span>计算机</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-psychology"></span>心理学</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-economics"></span>经济学</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-law"></span>法学</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-history"></span>历史</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-philosophy"></span>哲学</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-engineering"></span>工学</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-economics"></span>经济学</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-law"></span>法学</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-history"></span>历史</span></a></li>
+            <li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-philosophy"></span>哲学</span></a></li>
+            <!--<li class="j-nav-style"><a href=""><span class="u-nav-name f-thide ga-click"><span class="u-icon-engineering"></span>工学</span></a></li>-->
+        </ul>
+            <!--Regular if6-->
+            <div class="u-nav-v2 f-cb">
+                <!--Regular if7-->
+                <ul>
+                <li><a href=""><span class="u-name ga-click current">全部</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">前沿技术</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">程序设计与开发</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">计算机基础与应用</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">软件工程</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">网络与安全技术</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">硬软件系统及原理</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">操作系统</span></a></li>
+                <li><a href=""><span class="u-name f-thide ga-click">组成原理</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="course">
+<!--computer-course-->
+<div class="courseshow">
+    <p class="courseshow__extra1">&nbsp</p>  <!--与banner撑开距离-->
+    <div class="courseshow__name">
+        <img class="courseshow-style" src="../../images/样式1.png" alt="">
+        <span class="courseshow__box-firitem">&nbsp&nbsp计算机</span>
+        <span class="courseshow__box-extraitem"></span>
+        <span class="font-size">排序方式：</span>
+        <div class="font-size">
+        按热度<input type="radio" name="sex" value="" title="" checked>
+        按播放量<input type="radio" name="sex" value="" title="" >
+        按评论数<input type="radio" name="sex" value="" title="" >
+        </div>
+    </div>
+    <div class="courseshow__video">
+        <ul class="elastic__layout">
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../images/5aae366e01afb.png" alt=""></li>
+                        <li class="h2-style">java高级程序设计</li>
+                        <li class="h3-style">尹萍</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../images/5aae366e01aa1.png" alt=""></li>
+                        <li class="h2-style">php新手入门</li>
+                        <li class="h3-style">王现伟</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="../../images/5ca8303051d34.png" alt=""></li>
+                        <li class="h2-style">C++从入门到精通</li>
+                        <li class="h3-style">张淑敏</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3 three">
+                <a href="">
+                    <ul>
+                        <li><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+            <div class="col-md-3-buttom three">
+                <a href="">
+                    <ul>
+                        <li ><img class="col-md-define-1" src="" alt=""></li>
+                        <h2></h2>
+                        <h3></h3>
+                    </ul>
+                </a>
+            </div>
+        </ul>
+    </div>
+    <!--</div>-->
+</div>
+<!--computer-course-->
+
+</div>
+<!--content-->
+<!--分页-->
+<!--<div class="pagination">-->
+    <!--<ul>-->
+        <!--<li><a href="#">Prev</a></li>-->
+        <!--<li class="active">-->
+            <!--<a href="#">1</a>-->
+        <!--</li>-->
+        <!--<li><a href="#">2</a></li>-->
+        <!--<li><a href="#">3</a></li>-->
+        <!--<li><a href="#">4</a></li>-->
+        <!--<li><a href="">...</a></li>-->
+        <!--<li><a href="#">Next</a></li>-->
+
+    <!--</ul>-->
+<!--</div>-->
+<div class="pagination-wrapper">
+    <div class="pagination">
+        <ul class="four">
+        <li><a href="#">首页</a></li>
+        <li><a href="#">上一页</a></li>
+        <li class="active">
+        <a href="#">1</a>
+        </li>
+        <li><a href="#">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="">...</a></li>
+        <li><a href="#">下一页</a></li>
+
+        </ul>
+    </div>
+</div>
+<!--分页-->
+<div class="footer_1">
+<div class="row">
+
+    <div class="col-3 menu">
+        <ul>
+            <li>加入我们</li>
+            <li>常见问题</li>
+            <li>意见反馈</li>
+            <li>法律条款</li>
+        </ul>
+    </div>
+
+    <div class="col-6 footer-style">
+        <h1>MOOC</h1>
+        <p>由高教社联手网易推出，让每一个有提升愿望的用户能够学到中国知名高校的课程，并获得认证。</p>
+    </div>
+    <div class="col-3">
+        <div class="aside">
+            <ul>
+            <li class="h2-style1">我们是？</li>
+            <p>由高教社联手网易推出中国知名高校网络课程平台</p>
+            <li class="h2-style1">我们在？</li>
+            <p>海南省三亚市吉阳区学院路171号三亚学院</p>
+            <li class="h2-style1">Be Better</li>
+            <p>我们将一起变得更优秀, 快加入我们吧</p>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="footer_2">
+    <p>Resize the browser window to see how the content respond to the resizing.</p>
+</div>
+</div>
+</body>
+<script src="../../js/lay/layui.js"></script>
+<script>
+$(function(){
+　　//给所有的单选按钮点击添加处理
+$("input[type='radio']").click(function(){
+　　　　　//找出和当前name一样的单选按钮对应的label，并去除选中的样式的class
+　　　　　$("input[type='radio'][name='"+$(this).attr('name')+"']").parent().removeClass("checked");
+　　　　　//给自己对应的label
+　　　　　$(this).parent().addClass("checked");
+});
+});
+</script>
+</html>

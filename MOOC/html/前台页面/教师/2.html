@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+    <SCRIPT LANGUAGE="javascript">
+        function addOther(x){
+            var xx=x+1;
+            document.getElementById('count').value=document.getElementById('count').value+1;
+            alert(xx);
+            document.getElementById('addonemore').innerHTML="Fname:<INPUT TYPE=text ID=firstnamexx SIZE=10 NAME=firstnamexx>"; // xx 这里是不起作用的，如何让其起作用呢?我可不想写十个这样的语句
+            document.getElementById('addonemore').innerHTML+=" Lname:<INPUT TYPE=text ID=lastnamexx SIZE=10 NAME=lastnamexx>";
+            document.getElementById('addonemore').innerHTML+=" Age:<INPUT TYPE=text ID=age1 SIZE=3 NAME=agexx>";
+            document.getElementById('addonemore').innerHTML+=" Team:<INPUT TYPE=text ID=teamxx SIZE=10 NAME=teamxx>";
+            document.getElementById('addonemore').innerHTML+=" Position:<SELECT ID=selectxx NAME=selectxx><OPTION VALUE='Guard'>Guard<OPTION VALUE='Forward'>Forward<OPTION VALUE='Center'>Center</SELECT>";
+            document.getElementById('addonemore').innerHTML+=" Description:<TEXTAREA ID=description1 NAME=descriptionxx ROWS=5 COLS=15></TEXTAREA>";
+            document.getElementById('addonemore').innerHTML+="<INPUT TYPE=button ID=buttonxx NAME=buttonxx VALUE='Add onemore' onclick=\"addOther(xx)\">";
+        }
+    </SCRIPT>
+</HEAD>
+<BODY>
+<FORM NAME=addForm ACTION=<?php echo $_SERVER['PHP_SELF'];?> METHOD=POST>
+Fname:<INPUT TYPE=text ID=firstname1 SIZE=10 NAME=firstname1>
+Lname:<INPUT TYPE=text ID=lastname1 SIZE=10 NAME=lastname1>
+Age:<INPUT TYPE=text ID=age1 SIZE=3 NAME=age1>
+Team:<INPUT TYPE=text ID=team1 SIZE=10 NAME=team1>
+Position:<SELECT ID=select1 NAME=select1>
+    <OPTION VALUE='Guard'>Guard
+    <OPTION VALUE='Forward'>Forward
+    <OPTION VALUE='Center'>Center
+</SELECT>
+Description:<TEXTAREA ID=description1 NAME=description1 ROWS=5 COLS=15></TEXTAREA>
+<INPUT TYPE=button ID=button1 NAME=button1 VALUE="Add onemore" onclick="addOther(1)">
+<P ID="addonemore"></P>
+<INPUT TYPE=hidden ID=count NAME=count VALUE=1>
+</FORM>
+</BODY>
+</HTML>
