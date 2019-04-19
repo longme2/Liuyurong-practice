@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/hotel_system</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+
+      <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+    <!-- 可选配置 -->
+    <!-- 显示SQL语句，在控制台显示 -->
+    <property name="hibernate.show_sql">true</property>
+    <!-- 格式化SQL语句 -->
+    <property name="hibernate.format_sql">true</property>
+    <!-- 生成数据库的表结构
+        update：如果没有表结构，创建表结构。如果存在，不会创建，添加数据
+    -->
+    <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+    <mapping class="com.service.order.Order" />
+    <mapping resource="com/hibernate/admin/AdminTableEntity.hbm.xml"/>
+    <mapping class="com.hibernate.admin.AdminTableEntity"/>
+    <mapping resource="com/hibernate/client/ClientTableEntity.hbm.xml"/>
+    <mapping class="com.hibernate.client.ClientTableEntity"/>
+    <mapping resource="com/hibernate/order/OrderTableEntity.hbm.xml"/>
+    <mapping class="com.hibernate.order.OrderTableEntity"/>
+    <mapping resource="com/hibernate/room/RoomTableEntity.hbm.xml"/>
+    <mapping class="com.hibernate.room.RoomTableEntity"/>
+
+
+  </session-factory>
+</hibernate-configuration>
